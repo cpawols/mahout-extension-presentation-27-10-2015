@@ -1070,6 +1070,8 @@ body {
   font-size: 20px; }
 
 .reveal .overlay.overlay-help .viewport .viewport-inner table {
+  float: left;
+  width: 33%;
   border: 1px solid #fff;
   border-collapse: collapse;
   font-size: 14px; }
