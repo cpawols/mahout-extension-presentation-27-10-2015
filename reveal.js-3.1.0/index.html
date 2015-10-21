@@ -279,32 +279,6 @@
 				</table>
 			      </section>
 			      </section>
-			      
-			      
-			      
-				
-			<section>
-			<section>
-			Liczenie scoru atrybutu korzystając z klasyfikatorów regułowych
-			</section>
-			<section>
-			TODO
-			</section>
-			</section>
-			<section>
-			<section>
-			Drzewa - szukanie reguł z drzew - idziemy ścieżką odzyskując reguły
-			<section>
-			TODO
-			</section>
-			</section>
-			</section>
-			
-			<section>
-			<section>
-			Dożynki
-			</section>
-			</section>
 				
 			    <section>
 			    <section>
@@ -336,6 +310,7 @@
 				
 				<section>
 				We will choose those arguments thanks to them we can distinguish object \(X_1\) from object \(X_i\)
+				
 				<span class=fragment>
 		<div class=id>	  
 			 <table id="previous-arrow">
@@ -345,22 +320,109 @@
 			 </table>
 		</div>
 			</span>
+			<p class=fragment>And we can generate two rules for object(class \(+\)  )</p>
+			<p class=fragment>( \(a=0 \wedge b=1 \Rightarrow dec = + \)  ) </br>
+					  ( \(a=0 \wedge d=1 \Rightarrow dec = + \)  )
+			</p>
 			
-			<p class=fragment> We can repeat this procedure for each objec and we will obtain the following table
-				</section>
+			</section>
+			
+			<section>
+			We can repeat this procedure for each objec and we will obtain the following table
+			</br>
+			
+			<table>
+				<tr><td></td><td>\(X_1\)</td><td>\(X_2\)</td><td>\(X_3\)</td></tr>
+				<tr><td></td><td>\(ab\)</td><td>\(abcd\)</td><td>\(ac\)</td></tr>
+				<tr><td></td><td>\(ad\)</td><td></td><td></td></tr>
+				</table>
+			</section>
+			
+			<section>
+			<h6>How select attributes from this algorith?</h6>
+			<p class=fragment>By frequency</p>
+			<p class=fragment>Using only a few rules</p>
+			
+			</section>
+			
+			<section>
+			<h6>By frequency</h6>
+			<p class=fragment>Count all appearing of each attribute and</p>
+			<p class=fragment>Find cutoff point (in some way...)</p> 
+			</section>
+			
+			<section>
+			<h6>Using only a few (the shortest) rules</h6>
+			
+			TODO...really todo...
+			</section>
+			
+			<section>
+			<h5>How to parallel this algorithm?</h5>
+			</section>
+			
+			<section>
+			Assuming  dataset has more than \(1000\) rows and more than \(20 000\) of columns we can consider...
+			</section>
+			
+			<section>
+			a few approaches...
+			
+			<li><p class=fragment>We can compute each column of distinguish matrix on different computer</p></li>
+			<li><p class=fragment>We can divide table by rows and compute each fragemnt on different computer </p> </li>
+			</section>
 			
 			
 			<section>
-			TODO
+			Second approaches
+			<h1>TODO</h1>
+			<p class=fragment>Using only the shortest rules we can send to another pack of object the shortest rules and making something...</p>
+			</section>
 			</section>
 			
+			<section>
+			<section>
+			A few words about experiment which take place last year...
 			</section>
 			
-			
+			<section>
+			Attribute selection by frequency of attribute in distinguish table
+			<p class=fragment> During experiments was problem with rules generator. <br>
+			All rules was generated in string form and it wasn't possible to getting (fast) numbers of attributes which was in table</p>
+			</section>
+			<section>
+			But the results was the following
+			<p class=fragment>
+			<table >
+				    <tr><td></td><td>Reducts</td><td>Reducts</td><td>Rules</td><td>Rules </td><td>Rules</td></tr>
+				    <tr><td>Acc</td><td>83.58%</td><td>90%</td><td>84.21%</td><td><p>89.36%</p></td><td>90.6%</td></tr>
+				    <tr><td>Atrr</td><td>6</td><td>7</td><td>6</td><td><p >7</p></td><td>8</td></tr>				
+			<!--	    <tr><td>Attr</td><td>[1, 0, 2, 4, 3, 7, 5]</td><td><p class="fragment">[1, 0, 4, 2, 15, 8, 3]</p></td><td> [1, 0, 4, 15, 3, 2]</td></tr> -->
+				    
+				    <tr><td>Time</td><td>10.7 sec</td><td>19.7 sec</td><td>70.2 sec</td><td><p >73.2 sec</p></td><td>163.4 sec</td></tr>
+				  
+				</table>
+			</p>
+			</section>
+			</section>
+			<section>
+			Further work
+			<align=left>
+			<li><p class=fragment> Generating artifficial dataset </p> </li>
+			<li><p class=fragment> Implementing "rules" algorithm in singel node version </p> </li>
+			<li><p class=fragment> Implementing "rules" algorithm using spark</p> </li>
+			<li><p class=fragment> Implementing algorithm which select attributes by frequency</p> </li>
+			<li><p class=fragment> Experiment with rules having origin from trees </p> </li>
+			<li><p class=fragment> And many more... </p> </li>
+			</section>
 				
 			<section>
-			Coś jeszcze?
+			Questions?
+			</section>
 			<section>
+			Thank You :)
+			</section>
+			
 			
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
