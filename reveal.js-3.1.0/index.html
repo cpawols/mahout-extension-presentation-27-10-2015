@@ -320,13 +320,31 @@
 			 </table>
 		</div>
 			</span>
-			<p class=fragment>And we can generate two rules for object(class \(+\)  )</p>
-			<p class=fragment>( \(a=0 \wedge b=1 \Rightarrow dec = + \)  ) </br>
-					  ( \(a=0 \wedge d=1 \Rightarrow dec = + \)  )
+			<p class=fragment>And we implicants</p>
+			<p class=fragment>( \(a=0 \vee b=1  \)  ) \(\wedge\) 
+					  ( \(a=0 \vee d=1  \)  )
 			</p>
+			<p class=fragment>And we can reduce this implicant to \(b\)</p>
+			<p class=fragment>And we obtain the following rule <br> \(a=0 \Rightarrow  dec  = + \)
 			
 			</section>
+			<section>
+			How to find the minimal rules?
+			<p class=fragment> It's complicated</p>
+			</section>
 			
+			<section>
+			Order attributes by frequency and trying cover each row in distinguish column
+			</section>
+			
+			<section>
+			We're trying cover each (or almost each) object in decision table by generated rule.
+			<p class=fragment> For this table we obtain two rules </p>
+			
+			
+			<p class=fragment> \(a=0 \Rightarrow +\) <br>
+					  \(a=1 \Rightarrow -\) </p>
+			</section>
 			<section>
 			We can repeat this procedure for each objec and we will obtain the following table
 			</br>
@@ -353,8 +371,9 @@
 			
 			<section>
 			<h6>Using only a few (the shortest) rules</h6>
+			<p class=fragment>We can choose only a few the shortest rules(from each column of distinguish table) and trying coverage the set of object using this rules.</p>
 			
-			TODO...really todo...
+			
 			</section>
 			
 			<section>
@@ -375,8 +394,8 @@
 			
 			<section>
 			Second approaches
-			<h1>TODO</h1>
-			<p class=fragment>Using only the shortest rules we can send to another pack of object the shortest rules and making something...</p>
+			<p class=fragment>Using only the shortest rules we can send to another pack of object the shortest rules and trying coverage rest of object</p>
+			<p class=fragment> (Example on the blackboard)</p>
 			</section>
 			</section>
 			
@@ -393,15 +412,24 @@
 			<section>
 			But the results was the following
 			<p class=fragment>
-			<table >
-				    <tr><td></td><td>Reducts</td><td>Reducts</td><td>Rules</td><td>Rules </td><td>Rules</td></tr>
-				    <tr><td>Acc</td><td>83.58%</td><td>90%</td><td>84.21%</td><td><p>89.36%</p></td><td>90.6%</td></tr>
-				    <tr><td>Atrr</td><td>6</td><td>7</td><td>6</td><td><p >7</p></td><td>8</td></tr>				
-			<!--	    <tr><td>Attr</td><td>[1, 0, 2, 4, 3, 7, 5]</td><td><p class="fragment">[1, 0, 4, 2, 15, 8, 3]</p></td><td> [1, 0, 4, 15, 3, 2]</td></tr> -->
-				    
-				    <tr><td>Time</td><td>10.7 sec</td><td>19.7 sec</td><td>70.2 sec</td><td><p >73.2 sec</p></td><td>163.4 sec</td></tr>
-				  
-				</table>
+			<table >
+
+				    <tr><td></td><td>Reducts</td><td>Reducts</td><td>Rules</td><td>Rules </td><td>Rules</td></tr>
+
+				    <tr><td>Acc</td><td>83.58%</td><td>90%</td><td>84.21%</td><td><p>89.36%</p></td><td>90.6%</td></tr>
+
+				    <tr><td>Atrr</td><td>6</td><td>7</td><td>6</td><td><p >7</p></td><td>8</td></tr>				
+
+			<!--	    <tr><td>Attr</td><td>[1, 0, 2, 4, 3, 7, 5]</td><td><p class="fragment">[1, 0, 4, 2, 15, 8, 3]</p></td><td> [1, 0, 4, 15, 3, 2]</td></tr> -->
+
+				    
+
+				    <tr><td>Time</td><td>10.7 sec</td><td>19.7 sec</td><td>70.2 sec</td><td><p >73.2 sec</p></td><td>163.4 sec</td></tr>
+
+				  
+
+				</table>
+
 			</p>
 			</section>
 			</section>
